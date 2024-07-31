@@ -24,7 +24,7 @@
 .yasb-bar {
     background-color:rgb(23, 23, 34);
     border:1px solid rgb(41, 42, 58);
-    padding: 0 8px;
+    padding: 0px 0px;
     border-radius: 10px;
 }
 .container-left,
@@ -108,13 +108,20 @@
 .fake-widget-right  {
     padding: 0;
 }
-.fake-widget-left .label,
+.fake-widget-left .label{
+    color: rgb(41, 42, 58);
+    background-color: rgb(24, 24, 37);
+    font-size: 25px;
+    padding: 0px 0px;
+    margin-right:-16px;
+    padding-bottom: 1px;
+}
 .fake-widget-right .label{
     color: rgb(41, 42, 58);
     background-color: rgb(24, 24, 37);
     font-size: 25px;
-    padding: 0;
-    margin-right:-16px;
+    padding: 0px 0px;
+    margin-left:-16px;
     padding-bottom: 1px;
 }
 
@@ -139,11 +146,13 @@
 .wifi-widget .label,
 .media-widget,
 .apps-widget .label,
-.volume-widget .label,
-.power-menu-widget .label {
-    padding-left:6px;
+.volume-widget .label {
+    padding-left: 6px;
     padding-right: 6px;
-    
+}
+.power-menu-widget .label {
+    padding-left: 12px;
+    padding-right: 0px;
 }
 .cpu-widget .label:hover,
 .memory-widget .label:hover,
