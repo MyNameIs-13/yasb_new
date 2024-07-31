@@ -42,8 +42,8 @@ bars:
           "volume",
          # "wifi",
          # "battery",
-          "power_menu",
           "fake_widget_right",
+          "power_menu",
         ]
 widgets:
   active_window:
