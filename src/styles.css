@@ -19,7 +19,7 @@
 * {
     font-size: 14px;
     color: #8c91a7;  
-    font-family: 'Hack Nerd Font','Hack Nerd Font Mono';
+    font-family: 'Segoe UI','JetBrainsMono NFP';
 }
 .yasb-bar {
     background-color:rgb(23, 23, 34);
@@ -138,6 +138,7 @@
 .apps-widget,
 .volume-widget,
 .power-menu-widget {
+    font-family: "Hack Nerd Font";
     padding-left:0;
     padding-right: 0;
     background-color: rgb(41, 42, 58)

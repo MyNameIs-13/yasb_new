@@ -130,7 +130,7 @@ class BatteryWidget(BaseWidget):
         threshold = self._get_battery_threshold()
         time_remaining = self._get_time_remaining()
         charging_icon = self._get_charging_icon(threshold)
-        is_charging_str = "no" if (self._battery_state is None) and (not self._battery_state.power_plugged) else "yes"
+        is_charging_str = "yes" if (self._battery_state is None) or self._battery_state.power_plugged else "no"
         percent = "100" if self._battery_state is None else str(self._battery_state.percent)
 
         battery_status = active_label_content\
