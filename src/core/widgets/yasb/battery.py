@@ -87,7 +87,7 @@ class BatteryWidget(BaseWidget):
 
     def _get_battery_threshold(self):
         if self._battery_state is None:
-            return "charging"
+            return "plugged"
         if self._battery_state.power_plugged:
             return "charging"
         percent = self._battery_state.percent
@@ -104,7 +104,9 @@ class BatteryWidget(BaseWidget):
             return "full"
 
     def _get_charging_icon(self, threshold: str):
-        if (self._battery_state is None) or self._battery_state.power_plugged:
+        if self._battery_state is None:
+            return self._status_icons[f"icon_plugged"]
+        if self._battery_state.power_plugged:
             if self._icon_charging_blink and self._blink:
                 empty_charging_icon = len(self._status_icons["icon_charging"]) * " "
                 icon_str = self._icon_charging_format \

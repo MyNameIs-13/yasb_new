@@ -15,6 +15,7 @@ DEFAULTS = {
         'full': 100,
     },
     'status_icons': {
+        'icon_plugged':'\ueb2d',
         'icon_charging': '\uf0e7',
         'icon_critical': '\uf244',
         'icon_low': '\uf243',
