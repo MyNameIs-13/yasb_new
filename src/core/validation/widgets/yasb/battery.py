@@ -102,6 +102,10 @@ VALIDATION_SCHEMA = {
     'status_icons': {
         'type': 'dict',
         'schema': {
+            'icon_plugged': {
+                'type': 'string',
+                'default': DEFAULTS['status_icons']['icon_plugged']
+            },
             'icon_charging': {
                 'type': 'string',
                 'default': DEFAULTS['status_icons']['icon_charging']

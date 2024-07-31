@@ -87,7 +87,7 @@ class BatteryWidget(BaseWidget):
 
     def _get_battery_threshold(self):
         if self._battery_state is None:
-            return "plugged"
+            return "charging"
         if self._battery_state.power_plugged:
             return "charging"
         percent = self._battery_state.percent
