@@ -80,6 +80,7 @@ class CpuWidget(BaseWidget):
         min_freq = cpu_freq.min
         max_freq = cpu_freq.max
         current_freq = cpu_freq.current
+        current_freq_ghz = current_freq / 1000
         current_perc = psutil.cpu_percent()
         cores_perc = psutil.cpu_percent(percpu=True)
 
@@ -94,7 +95,8 @@ class CpuWidget(BaseWidget):
             'freq': {
                 'min': min_freq,
                 'max': max_freq,
-                'current': current_freq
+                'current': current_freq,
+                'current_ghz': current_freq_ghz
             },
             'percent': {
                 'core': cores_perc,

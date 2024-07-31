@@ -12,7 +12,7 @@ from PIL import Image
 import win32gui
 from core.utils.win32.app_icons import get_window_icon
 
-IGNORED_TITLES = ['', ' ', 'FolderView', 'Program Manager', 'python3', 'pythonw3', 'YasbBar', 'Search', 'Start']
+IGNORED_TITLES = ['', ' ', 'FolderView', 'Program Manager', 'python3', 'pythonw3', 'YasbBar', 'Search', 'Start', 'python']
 IGNORED_CLASSES = ['WorkerW', 'TopLevelWindowForOverflowXamlIsland', 'Shell_TrayWnd', 'Shell_SecondaryTrayWnd']
 IGNORED_PROCESSES = ['SearchHost.exe', 'komorebi.exe']
 IGNORED_YASB_TITLES = [APP_BAR_TITLE]
@@ -181,7 +181,9 @@ class ActiveWindowWidget(BaseWidget):
                     self._window_title_text.setText(self._label_no_window)
                     if self._label_icon:
                         self._window_icon_label.setText(self._label_no_window)
-                    
+
+                win_info['process_name_noexe'] = str(win_info['process']['name']).replace('.exe', '')
+
                 self._win_info = win_info
                 self._update_text()
 
