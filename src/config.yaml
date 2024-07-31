@@ -186,7 +186,7 @@ widgets:
       temp_format: 'celsius'
       location_id: '1d27fbb9493f58f2a34f51097bdc432ab97b570b52871dc9720a4fa891818a03'
       callbacks:
-        on_right: "toggle_label"
+        on_left: "toggle_label"
       icons: 
         sunnyDay: "\ue30d"
         clearNight: "\ue32b"
@@ -287,8 +287,8 @@ widgets:
   fake_widget_right:
     type: "yasb.custom.CustomWidget"
     options:
-      label: "\ue0b6"
-      label_alt: "\ue0b6"
+      label: "\ue0b4"
+      label_alt: "\ue0b4"
       class_name: "fake-widget-right"
    
   nvidia_temp:

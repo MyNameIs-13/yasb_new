@@ -86,7 +86,6 @@ class BatteryWidget(BaseWidget):
         return time_left
 
     def _get_battery_threshold(self):
-
         if self._battery_state is None:
             return "charging"
         if self._battery_state.power_plugged:
