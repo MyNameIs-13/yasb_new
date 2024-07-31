@@ -28,7 +28,7 @@ bars:
     widgets:
       left:
         [
-          "fake_widget_left", "komorebi_workspaces", "komorebi_active_layout", "active_window"
+          "komorebi_workspaces", "komorebi_active_layout", "active_window"
         ] 
       center: [
          "clock", "weather"

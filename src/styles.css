@@ -113,7 +113,7 @@
     background-color: rgb(24, 24, 37);
     font-size: 25px;
     padding: 0px 0px;
-    margin-right:-16px;
+    margin-right:-8px;
     padding-bottom: 1px;
 }
 .fake-widget-right .label{
@@ -152,7 +152,7 @@
 }
 .power-menu-widget .label {
     padding-left: 12px;
-    padding-right: 0px;
+    padding-right: 12px;
 }
 .cpu-widget .label:hover,
 .memory-widget .label:hover,
