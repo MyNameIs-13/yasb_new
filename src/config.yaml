@@ -39,10 +39,10 @@ bars:
           "traffic",
           "cpu",
           "memory",
-          "wifi",
           "volume",
+         # "wifi",
          # "battery",
-         # "power_menu",
+          "power_menu",
           "fake_widget_right",
         ]
 widgets:
