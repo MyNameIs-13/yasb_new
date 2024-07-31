@@ -19,7 +19,7 @@
 * {
     font-size: 14px;
     color: #8c91a7;  
-    font-family: 'Segoe UI','JetBrainsMono NFP';
+    font-family: 'Hack Nerd Font','Hack Nerd Font Mono';
 }
 .yasb-bar {
     background-color:rgb(23, 23, 34);
@@ -58,6 +58,7 @@
     color: rgb(0, 0, 0);
     font-weight: bold;
 }
+.weather-widget,
 .clock-widget .label {
     padding-bottom: 3px;
     background: none;
@@ -127,27 +128,41 @@
 .weather-widget .label {
     font-weight: 600;
 }
+
+.cpu-widget,
+.memory-widget,
+.traffic-widget,
+.battery-widget,
+.wifi-widget,
 .media-widget,
 .apps-widget,
-.weather-widget,
 .volume-widget,
 .power-menu-widget {
     padding-left:0;
     padding-right: 0;
     background-color: rgb(41, 42, 58)
 }
+
+.cpu-widget .label,
+.memory-widget .label,
+.traffic-widget .label,
+.battery-widget .label,
+.wifi-widget .label,
 .media-widget,
 .apps-widget .label,
-.weather-widget .label,
 .volume-widget .label,
 .power-menu-widget .label {
     padding-left:6px;
     padding-right: 6px;
     
 }
+.cpu-widget .label:hover,
+.memory-widget .label:hover,
+.traffic-widget .label:hover,
+.battery-widget .label:hover,
+.wifi-widget .label:hover,
 .media-widget .btn:hover,
 .apps-widget .label:hover,
-.weather-widget .label:hover,
 .volume-widget .label:hover,
 .power-menu-widget .label:hover {
     background-color: rgb(64, 64, 87);
@@ -170,7 +185,7 @@
     height: 120px;
     border-radius: 16px;
     background-color: rgb(41, 42, 58);
-    font-family: "SegoeUI";
+    font-family: "Hack Nerd Font";
     color: white;
     border: 1px solid rgba(255,255,255,0.1);
     margin: 8px;

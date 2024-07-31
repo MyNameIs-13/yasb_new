@@ -116,8 +116,8 @@ class WeatherWidget(BaseWidget):
             logging.warning("Failed to retrieve weather info")
             # logging.exception(e)
 
-        if self.callback_left == "do_nothing":
-            self.callback_left = f"exec cmd /c start {url}"
+        if self.callback_right == "do_nothing":
+            self.callback_right = f"exec cmd /c start {url}"
 
         return {"temp": temp, "humidity": humidity, "temp_alt": temp_alt, "icon": icon}
 

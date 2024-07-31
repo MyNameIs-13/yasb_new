@@ -70,6 +70,9 @@ class BatteryWidget(BaseWidget):
         self._update_label()
 
     def _get_time_remaining(self) -> str:
+        if self._battery_state is None:
+            return "unlimited"
+
         secs_left = self._battery_state.secsleft
 
         if secs_left == psutil.POWER_TIME_UNLIMITED:
@@ -83,6 +86,11 @@ class BatteryWidget(BaseWidget):
         return time_left
 
     def _get_battery_threshold(self):
+
+        if self._battery_state is None:
+            return "charging"
+        if self._battery_state.power_plugged:
+            return "charging"
         percent = self._battery_state.percent
 
         if percent <= self._status_thresholds['critical']:
@@ -97,7 +105,7 @@ class BatteryWidget(BaseWidget):
             return "full"
 
     def _get_charging_icon(self, threshold: str):
-        if self._battery_state.power_plugged:
+        if (self._battery_state is None) or self._battery_state.power_plugged:
             if self._icon_charging_blink and self._blink:
                 empty_charging_icon = len(self._status_icons["icon_charging"]) * " "
                 icon_str = self._icon_charging_format \
@@ -122,16 +130,15 @@ class BatteryWidget(BaseWidget):
 
         threshold = self._get_battery_threshold()
         time_remaining = self._get_time_remaining()
-        is_charging_str = "yes" if self._battery_state.power_plugged else "no"
         charging_icon = self._get_charging_icon(threshold)
+        is_charging_str = "no" if (self._battery_state is None) and (not self._battery_state.power_plugged) else "yes"
+        percent = "100" if self._battery_state is None else str(self._battery_state.percent)
+
         battery_status = active_label_content\
-            .replace("{percent}", str(self._battery_state.percent)) \
+            .replace("{percent}", percent) \
             .replace("{time_remaining}", time_remaining) \
             .replace("{is_charging}", is_charging_str) \
             .replace("{icon}", charging_icon)
-
-        if self._battery_state.power_plugged:
-            threshold = "charging"
 
         alt_class = "alt" if self._show_alt_label else ""
         active_label.setText(battery_status)

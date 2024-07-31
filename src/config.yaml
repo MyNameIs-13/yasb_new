@@ -69,16 +69,16 @@ widgets:
     type: "yasb.clock.ClockWidget"
     options:
       label: "{%a %d, %b %H:%M}"
-      label_alt: "{%A %d %B %Y, %H:%M}"
+      label_alt: "{%A %d %B %Y, %H:%M %Z}"
       #locale: 'en_EN' # Langugae for date, you can set your own, example fr_FR
       #timezones: [] #Looking up time zone info from registry
-      timezones: ["Europe_Brussels", "America/New_York"]
+      timezones: ["Europe/Brussels", "America/New_York"]
 
   cpu:
     type: "yasb.cpu.CpuWidget"
     options:
-      label: "\uf4bc {info[percent][total]}% - {info[freq][current_ghz]:.2f}Ghz"
-      label_alt: "\uf4bc {info[histograms][cpu_percent]}"
+      label: "\uf4bc  {info[percent][total]}% - {info[freq][current_ghz]:.2f}Ghz"
+      label_alt: "\uf4bc  {info[histograms][cpu_percent]}"
       update_interval: 2000
       histogram_icons:
         - '\u2581' # 0%
@@ -97,8 +97,8 @@ widgets:
   memory:
     type: "yasb.memory.MemoryWidget"
     options:
-      label: "\uf4bc {virtual_mem_used}/{virtual_mem_total}"
-      label_alt: "\uf4bc {virtual_mem_percent}%"
+      label: "\uefc5   {virtual_mem_used}/{virtual_mem_total}"
+      label_alt: "\uefc5   {virtual_mem_percent}%"
       update_interval: 5000
       callbacks:
         on_right: "exec cmd /c Taskmgr"
