@@ -9,7 +9,7 @@ bars:
     class_name: "yasb-bar"
     alignment:
       position: "top"
-      center: false
+      center: true
     blur_effect:
       enabled: false
       acrylic: false
@@ -41,8 +41,8 @@ bars:
           "memory",
           "wifi",
           "volume",
-          "battery",
-          "power_menu",
+         # "battery",
+         # "power_menu",
           "fake_widget_right",
         ]
 widgets:
@@ -77,8 +77,8 @@ widgets:
   cpu:
     type: "yasb.cpu.CpuWidget"
     options:
-      label: "\uf4bc  {info[percent][total]}% - {info[freq][current_ghz]:.2f}Ghz"
-      label_alt: "\uf4bc  {info[histograms][cpu_percent]}"
+      label: "\uf4bc {info[percent][total]}% - {info[freq][current_ghz]:.2f}Ghz"
+      label_alt: "\uf4bc {info[histograms][cpu_percent]}"
       update_interval: 2000
       histogram_icons:
         - '\u2581' # 0%
@@ -97,8 +97,8 @@ widgets:
   memory:
     type: "yasb.memory.MemoryWidget"
     options:
-      label: "\uefc5   {virtual_mem_used}/{virtual_mem_total}"
-      label_alt: "\uefc5   {virtual_mem_percent}%"
+      label: "\uefc5  {virtual_mem_used}/{virtual_mem_total}"
+      label_alt: "\uefc5  {virtual_mem_percent}%"
       update_interval: 5000
       callbacks:
         on_right: "exec cmd /c Taskmgr"
@@ -157,7 +157,7 @@ widgets:
     options:
       label: "\ueab4 {download_speed}\ue621\ueab7 {upload_speed}"
       label_alt: "Download {download_speed}\ue621Upload {upload_speed}"
-      update_interval: 1000 # Update interval should be a multiple of 1000
+      update_interval: 2000 # Update interval should be a multiple of 1000
       callbacks:
         on_left: "toggle_label"
         on_right: "exec cmd /c Taskmgr"
