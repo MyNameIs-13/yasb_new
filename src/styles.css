@@ -31,7 +31,7 @@
 .container-center,
 .container-right {
     margin: 0;
-    padding: 0
+    padding: 0;
 }
  
 .widget {
@@ -58,13 +58,12 @@
     color: rgb(0, 0, 0);
     font-weight: bold;
 }
-.weather-widget,
+.weather-widget .label,
 .clock-widget .label {
     padding-bottom: 3px;
     background: none;
-    font-size: 12px;
+    font-size: 14px;
     padding-bottom: 2px;
-    font-weight: 600;
     color: #a9aec2;
 }
 .active-window-widget .label {
@@ -109,24 +108,14 @@
 .fake-widget-right  {
     padding: 0;
 }
-.fake-widget-left .label{
+.fake-widget-left .label,
+.fake-widget-right .label{
     color: rgb(41, 42, 58);
     background-color: rgb(24, 24, 37);
     font-size: 25px;
     padding: 0;
     margin-right:-16px;
     padding-bottom: 1px;
-}
-.fake-widget-right .label{
-    color: rgb(24, 24, 37);
-    background-color: rgb(41, 42, 58);
-    font-size: 25px;
-    padding: 0;
-    margin-right:-16px;
-    padding-bottom: 1px;
-} 
-.weather-widget .label {
-    font-weight: 600;
 }
 
 .cpu-widget,
