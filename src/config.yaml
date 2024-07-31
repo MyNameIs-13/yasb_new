@@ -61,7 +61,7 @@ widgets:
   battery:
     type: "yasb.battery.BatteryWidget"
     options:
-      label: "{icon}  {percent}%"
+      label: "{icon}"
       label_alt: "{icon}  {percent}% | time: {time_remaining}"
       time_remaining_natural: false
 
